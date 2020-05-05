@@ -1,9 +1,10 @@
 # ros_vnc
 
-## dependencies
-- docker
-
 ## installation
+
+```
+$ docker pull arijun/ros_vnc:melodic
+```
 
 from source code
 ```
@@ -15,5 +16,16 @@ $ sh ./build.sh
 ## How to use
 run docker image and launch vnc
 ```
-$ sh ./run.sh
+$ sh ./run.sh 
 ```
+
+launch vnc viewer on your local machine
+
+## Docker tags
+- melodic
+- kinetic
+- dashing
+- eloquent
+
+## dependencies
+- docker==19.03.8
