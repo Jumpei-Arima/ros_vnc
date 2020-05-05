@@ -38,8 +38,9 @@ RUN mkdir -p ros_catkin_ws/src \
     && cd ros_catkin_ws \
     && /bin/bash -c "source /opt/ros/melodic/setup.bash; catkin build"
 
-ENV ROS_PACKAGE_PATH=/root/ros_catkin_ws:$ROS_PACKAGE_PATH
 ENV ROS_WORKSPACE=/root/ros_catkin_ws
+ENV ROS_PACKAGE_PATH=${ROS_WORKSPACE}:$ROS_PACKAGE_PATH
+RUN echo "source ${ROS_WORKSPACE}/devel/setup.bash" >> ~/.bashrc
 WORKDIR /root
 
 # window manager
