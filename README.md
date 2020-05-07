@@ -1,13 +1,14 @@
 # ros_vnc
 
-## installation
+## install docker image
 
-### from docker hub
+### pull docker image from docker hub
+dockerhub page: [arijun/ros_vnc](https://hub.docker.com/repository/docker/arijun/ros_vnc)
 ```
 $ docker pull arijun/ros_vnc:melodic
 ```
 
-### from source code
+### build dockerfile
 ```
 $ git clone https://github.com/Jumpei-Arima/ros_vnc
 $ cd ros_vnc
@@ -37,11 +38,16 @@ $ ./exec.sh <tag_name>
 ```
 
 ### bridge ros and ros2
+install image
+```
+$ docker pull osrf/ros:eloquent-ros1-bridge
+```
+
 ```
 $ ./run_bridge.sh
 ```
 
-## Docker tags
+## [Docker tags](https://hub.docker.com/repository/docker/arijun/ros_vnc/tags?page=1)
 ### ros
 - melodic
 - kinetic
